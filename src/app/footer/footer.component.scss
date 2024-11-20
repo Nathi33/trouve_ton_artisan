@@ -1,0 +1,61 @@
+@import "../../styles.scss";
+
+$subtitleSize: 0.875rem;
+
+footer {
+  font: {
+    size: $subtitleSize;
+    weight: bold;
+  }
+  background-color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+i {
+  margin-right: 0.5rem;
+  color: $textColor;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
+}
+
+a:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.address,
+.phone {
+  font: {
+    size: $subtitleSize;
+    weight: normal;
+  }
+}
+
+.container-link,
+.container-contact {
+  padding-top: 2rem;
+  padding-left: 2rem; //14rem
+}
+
+/**********RESPONSIVE**********/
+@media screen and (min-width: 1440px) {
+  .container-link,
+  .container-contact {
+    padding-top: 2rem;
+    padding-left: 14rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .container-link,
+  .container-contact {
+    padding-top: 2rem;
+    padding-left: 14rem; //14rem
+  }
+}
