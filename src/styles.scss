@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Graphik";
+  src: url("./assets/Fonts/GraphikBold.woff");
+  src: url("./assets/Fonts/GraphikBold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./assets/Fonts/GraphikRegular.woff");
+  src: url("./assets/Fonts/GraphikRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("./assets/Fonts/GraphikSemibold.woff");
+  src: url("./assets/Fonts/GraphikSemibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+$fontFamily: Graphik, sans-serif;
+$textColor: #384050;
+$titleColor: #00497c;
+$otherColor: #0074c7;
+$backgroundColor: #f1f8fc;
+
+body {
+  font: {
+    family: $fontFamily;
+    size: 1rem;
+    weight: normal;
+  }
+  margin: 0;
+  padding-top: 5rem;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font: {
+    family: $fontFamily;
+    weight: bold;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  color: $titleColor;
+}
+
+h2 {
+  font-size: 2.375rem;
+  color: $titleColor;
+}
+
+h3 {
+  font-size: 1.875rem;
+  color: $otherColor;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: $otherColor;
+}
+
+h5 {
+  font-size: 1.375rem;
+  color: $titleColor;
+}
