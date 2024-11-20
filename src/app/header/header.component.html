@@ -1,1 +1,71 @@
-<p>header works!</p>
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/"
+        ><img
+          src="../../assets/pictures/Logo.png"
+          class="logo"
+          alt="Logo de la plateforme Trouve ton artisan représentant un artisan tenant une pancarte"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex" role="search">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input
+              id="search-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Rechercher votre artisan"
+              aria-label="Search"
+              [value]="searchText"
+              (click)="changeText()"
+            />
+          </div>
+          <button class="btn btn-outline" type="submit">Rechercher</button>
+        </form>
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Spécialité
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" routerLink="/building">Bâtiment</a>
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/services-page"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/manufacturing"
+                  >Fabrication</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" routerLink="/food">Alimentation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
