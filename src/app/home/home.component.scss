@@ -1,0 +1,46 @@
+@import "../../styles.scss";
+
+/******** GENERAL STYLES ********/
+
+main {
+  background-color: $backgroundColor;
+}
+
+.site-operation {
+  padding: 6.25rem 0;
+}
+
+.main-title {
+  padding-left: 1.5rem;
+}
+
+/******** SITE SECTION ********/
+
+.site-section {
+  padding-top: 6.25rem;
+  padding-left: 1.5rem;
+}
+
+.list-ordered {
+  font-size: 1.875rem;
+  color: $otherColor;
+  font-weight: bold;
+}
+
+.list-element {
+  padding-bottom: 2.25rem;
+}
+
+/******** SITE SECTION ********/
+
+@media screen and (min-width: 1024px) {
+  .site-section {
+    padding: 8.1875rem 5rem 0 11.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    justify-content: space-between;
+  }
+}

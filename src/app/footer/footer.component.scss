@@ -44,18 +44,10 @@ a:hover {
 }
 
 /**********RESPONSIVE**********/
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .container-link,
   .container-contact {
     padding-top: 2rem;
     padding-left: 14rem;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .container-link,
-  .container-contact {
-    padding-top: 2rem;
-    padding-left: 14rem; //14rem
   }
 }
