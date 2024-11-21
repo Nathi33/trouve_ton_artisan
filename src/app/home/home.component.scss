@@ -6,15 +6,15 @@ main {
   background-color: $backgroundColor;
 }
 
-.site-operation {
-  padding: 6.25rem 0;
-}
-
-.main-title {
+.main-title,
+.title-craftsmen {
   padding-left: 1.5rem;
 }
 
 /******** SITE SECTION ********/
+.site-operation {
+  padding: 6.25rem 0;
+}
 
 .site-section {
   padding-top: 6.25rem;
@@ -31,7 +31,16 @@ main {
   padding-bottom: 2.25rem;
 }
 
-/******** SITE SECTION ********/
+/******** TOP 3 ********/
+.top3 {
+  padding-bottom: 6.25rem;
+}
+
+.title-craftsmen {
+  padding-bottom: 6.25rem;
+}
+
+/******** RESPONSIVE ********/
 
 @media screen and (min-width: 1024px) {
   .site-section {

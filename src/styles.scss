@@ -95,3 +95,31 @@ h5 {
   background-color: rgba(205, 44, 46, 0.75);
   margin-bottom: 2.5625rem;
 }
+.card-body {
+  background-color: rgba(0, 73, 124, 0.1);
+  padding-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.craftsmen-card {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.stars {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.card-h4 {
+  margin-top: 1.5625rem;
+}
+
+.description-craftsman {
+  padding-bottom: 1.5rem;
+}
+
+.card-body:hover {
+  background-color: rgba(130, 184, 100, 0.75);
+  transform: scale(1.05);
+}

@@ -17,6 +17,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { ServicesPageComponent } from './services-page/services-page.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { StarRatingPipe } from './star-rating.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,8 +36,9 @@ import { ServicesPageComponent } from './services-page/services-page.component';
     NotFoundComponent,
     PersonalDataComponent,
     ServicesPageComponent,
+    StarRatingPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
