@@ -49,4 +49,34 @@
       </ol>
     </div>
   </section>
+  <section class="top3">
+    <div class="title-craftsmen">
+      <div class="rectangle"></div>
+      <h2>Nos artisans du mois</h2>
+    </div>
+    <div class="craftsmen-card" *ngIf="data && data.length > 0">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let artisan of data">
+          <div class="card-body h-100">
+            <div class="stars">
+              <i
+                *ngFor="let star of artisan.note | starRating"
+                class="bi"
+                [ngClass]="{
+                  'bi-star-fill': star === 'full',
+                  'bi-star-half': star === 'half',
+                  'bi-star': star === 'empty'
+                }"
+              ></i>
+            </div>
+            <div class="description-craftsman">
+              <h3 class="card-name">{{ artisan.name }}</h3>
+              <h4 class="card-h4">{{ artisan.specialty }}</h4>
+              <h4 class="card-h4">{{ artisan.location }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
