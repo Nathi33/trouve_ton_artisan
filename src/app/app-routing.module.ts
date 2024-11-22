@@ -8,9 +8,9 @@ import { FoodComponent } from './food/food.component';
 import { HomeComponent } from './home/home.component';
 import { LegalNoticesComponent } from './legal-notices/legal-notices.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { ServicesPageComponent } from './services-page/services-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'accessibility', component: AccessibilityComponent },
@@ -21,9 +21,9 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'legal-notices', component: LegalNoticesComponent },
   { path: 'manufacturing', component: ManufacturingComponent },
-  { path: '**', component: NotFoundComponent },
   { path: 'personal-data', component: PersonalDataComponent },
-  { path: 'services-page', component: ServicesPageComponent },
+  { path: 'services', component: ServicesPageComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

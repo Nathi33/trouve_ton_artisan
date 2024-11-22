@@ -13,9 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LegalNoticesComponent } from './legal-notices/legal-notices.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { ServicesPageComponent } from './services-page/services-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { StarRatingPipe } from './star-rating.pipe';
@@ -34,9 +34,10 @@ import { CraftsmanCardTypeComponent } from './craftsman-card-type/craftsman-card
     HomeComponent,
     LegalNoticesComponent,
     ManufacturingComponent,
-    NotFoundComponent,
     PersonalDataComponent,
     ServicesPageComponent,
+    NotFoundComponent,
+
     StarRatingPipe,
     CraftsmanCardTypeComponent,
   ],
