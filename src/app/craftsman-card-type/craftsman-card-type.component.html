@@ -2,7 +2,7 @@
   class="card"
   [ngClass]="{ 'blue-card': index % 2 === 0, 'white-card': index % 2 !== 0 }"
 >
-  <div class="card-body">
+  <div class="card-body h-100">
     <div class="stars">
       <i
         *ngFor="let star of artisan.note | starRating"
