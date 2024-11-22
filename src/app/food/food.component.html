@@ -1,1 +1,20 @@
-<p>food works!</p>
+<main>
+  <section class="title">
+    <div class="rectangle"></div>
+    <h2>L'Alimentation</h2>
+  </section>
+  <section class="food-craftsmen">
+    <div class="craftsmen-card" *ngIf="data && data.length > 0">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <ng-container *ngIf="!selectedArtisans">
+          <div class="col" *ngFor="let artisan of data; let i = index">
+            <app-craftsman-card-type
+              [artisan]="artisan"
+              [index]="i"
+            ></app-craftsman-card-type>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</main>
