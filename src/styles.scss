@@ -79,6 +79,10 @@ h5 {
   color: $titleColor;
 }
 
+a {
+  text-decoration: none;
+}
+
 .btn {
   background-color: #0074c7;
   border: none;
@@ -121,4 +125,8 @@ h5 {
 .card-body:hover {
   background-color: rgba(130, 184, 100, 0.75);
   transform: scale(1.05);
+}
+
+.bi {
+  color: #000;
 }

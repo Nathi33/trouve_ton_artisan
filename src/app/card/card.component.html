@@ -1,1 +1,100 @@
-<p>card works!</p>
+<main>
+  <section class="title">
+    <div class="rectangle"></div>
+    <h2>Nom de l'entreprise</h2>
+  </section>
+  <section class="card-section">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card-craftsman" *ngIf="artisan">
+          <div class="card-body-description">
+            <h3 class="card-description-name">{{ artisan.name }}</h3>
+            <div class="card-description">
+              <i
+                *ngFor="let star of artisan.note | starRating"
+                class="bi"
+                [ngClass]="{
+                  'bi-star-fill': star === 'full',
+                  'bi-star-half': star === 'half',
+                  'bi-star': star === 'empty'
+                }"
+              ></i>
+            </div>
+            <h3 class="card-description-location">{{ artisan.location }}</h3>
+            <h3 class="about">A propos de nous :</h3>
+            <p class="card-description">
+              {{ artisan.about }}
+            </p>
+            <div class="learn-more" *ngIf="artisan.website">
+              <h3 class="learn-more">En savoir plus :</h3>
+              <a class="card-link" routerLink="{{ artisan.website }}">{{
+                artisan.website
+              }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-contact">
+          <div class="card-body-description">
+            <h3 class="card-title">Nous contacter</h3>
+            <form [formGroup]="formulaire" (ngSubmit)="onSubmit()">
+              <div class="mb-3 item">
+                <label for="name" class="form-label">Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  formControlName="name"
+                  placeholder=""
+                />
+                <!-- Message d'erreur si le champ est vide -->
+                <div *ngIf="submitted && f['name'].errors" class="text-danger">
+                  Le champ nom est requis.
+                </div>
+              </div>
+
+              <div class="mb-3 item">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                  placeholder=""
+                />
+                <div *ngIf="submitted && f['email'].errors" class="text-danger">
+                  Le champ email est requis.
+                  <div *ngIf="f['email'].errors?.['email']">
+                    Veuillez entrer une adresse email valide.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 item-message">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  formControlName="message"
+                  rows="9"
+                  placeholder="Entrez votre message ..."
+                ></textarea>
+                <div
+                  *ngIf="submitted && f['message'].errors"
+                  class="text-danger"
+                >
+                  Le champ message est requis.
+                </div>
+              </div>
+              <button type="submit" class="btn">Envoyer</button>
+            </form>
+            <!-- Message de confirmation d'envoi -->
+            <div class="msg-envoi" *ngIf="messageEnvoye">
+              Votre message a été envoyé avec succès à {{ artisan?.email }} !
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

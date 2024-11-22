@@ -24,4 +24,10 @@ export class HomeComponent implements OnInit {
       this.data = data.filter((artisan) => artisan.top);
     });
   }
+
+  selectedArtisans: any = null;
+
+  selectArtisans(artisan: any): void {
+    this.selectArtisans = artisan;
+  }
 }
