@@ -19,6 +19,7 @@ import { ServicesPageComponent } from './services-page/services-page.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { StarRatingPipe } from './star-rating.pipe';
+import { CraftsmanCardTypeComponent } from './craftsman-card-type/craftsman-card-type.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { StarRatingPipe } from './star-rating.pipe';
     PersonalDataComponent,
     ServicesPageComponent,
     StarRatingPipe,
+    CraftsmanCardTypeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

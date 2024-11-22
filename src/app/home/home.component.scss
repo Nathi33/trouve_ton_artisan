@@ -40,6 +40,13 @@ main {
   padding-bottom: 6.25rem;
 }
 
+.card-body {
+  background-color: rgba(0, 73, 124, 0.1);
+  padding-left: 1rem;
+  border: rgba(0, 0, 0, 0.175) 0.0625rem solid;
+  transition: transform 0.3s ease;
+}
+
 /******** RESPONSIVE ********/
 
 @media screen and (min-width: 1024px) {
