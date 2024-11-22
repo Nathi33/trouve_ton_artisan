@@ -1,5 +1,7 @@
 @import "../../styles.scss";
 
+/******** GENERAL STYLES ********/
+
 .title {
   padding: 6.25rem 0 6.25rem 1.5rem;
 }
@@ -16,15 +18,48 @@
   width: 38.75rem;
 }
 
+.card-craftsman,
+.card-contact {
+  border: rgba(0, 0, 0, 0.175) 0.0625rem solid;
+  height: 100%;
+}
+
+/******** CARD SECTION STYLES ********/
+
+.card-craftsman {
+  background-color: #fff;
+}
+
 .card-body-description {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-.card-craftsman,
-.card-contact {
-  border: rgba(0, 0, 0, 0.175) 0.0625rem solid;
-  height: 100%;
+.card-description-name {
+  padding-bottom: 3.875rem;
+  padding-top: 1.875rem;
+  color: $titleColor;
+}
+
+.card-description {
+  padding-bottom: 3.875rem;
+  font-size: 1.5rem;
+  color: $otherColor;
+}
+
+.card-description-location {
+  padding-bottom: 3.875rem;
+  color: $titleColor;
+}
+
+.about {
+  padding-bottom: 3.875rem;
+  color: $titleColor;
+}
+
+.learn-more {
+  margin-bottom: 1.875rem;
+  color: $titleColor;
 }
 
 .card-link {
@@ -36,39 +71,10 @@
   text-decoration: underline;
 }
 
-.card-craftsman {
-  background-color: #fff;
-}
+/******** CARD CONTACT STYLES ********/
 
 .card-contact {
   background-color: rgba(0, 73, 124, 0.1);
-}
-
-.card-description-name {
-  padding-bottom: 3.875rem;
-  padding-top: 1.875rem;
-  color: $titleColor;
-}
-
-.card-description-location {
-  padding-bottom: 3.875rem;
-  color: $titleColor;
-}
-
-.card-description {
-  padding-bottom: 3.875rem;
-  font-size: 1.5rem;
-  color: $otherColor;
-}
-
-.about {
-  padding-bottom: 3.875rem;
-  color: $titleColor;
-}
-
-.learn-more {
-  margin-bottom: 1.875rem;
-  color: $titleColor;
 }
 
 .card-title {
