@@ -29,4 +29,14 @@ export class DataCraftsmanService {
         )
       );
   }
+
+  //Récupère un artisan par son ID
+  getArtisansById(id: string): Observable<Artisans | undefined> {
+    return this.getData().pipe(
+      map((artisans) => {
+        const artisan = artisans.find((artisan) => artisan.id === id);
+        return artisan;
+      })
+    );
+  }
 }

@@ -6,14 +6,27 @@
   <section class="building-craftsmen">
     <div class="craftsmen-card" *ngIf="data && data.length > 0">
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <ng-container *ngIf="!selectedArtisans">
+        <ng-container *ngIf="!selectedArtisans; else selectedArtisansTemplate">
           <div class="col" *ngFor="let artisan of data; let i = index">
+            <a [routerLink]="['/card', artisan.id]">
+              <app-craftsman-card-type
+                [artisan]="artisan"
+                [index]="i"
+              ></app-craftsman-card-type>
+            </a>
+          </div>
+        </ng-container>
+        <ng-template #selectedArtisansTemplate>
+          <div
+            class="col"
+            *ngFor="let artisan of selectedArtisans; let i = index"
+          >
             <app-craftsman-card-type
               [artisan]="artisan"
               [index]="i"
             ></app-craftsman-card-type>
           </div>
-        </ng-container>
+        </ng-template>
       </div>
     </div>
   </section>

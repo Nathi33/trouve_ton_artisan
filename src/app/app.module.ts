@@ -20,6 +20,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StarRatingPipe } from './star-rating.pipe';
 import { CraftsmanCardTypeComponent } from './craftsman-card-type/craftsman-card-type.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,12 @@ import { CraftsmanCardTypeComponent } from './craftsman-card-type/craftsman-card
     StarRatingPipe,
     CraftsmanCardTypeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,99 @@
+@import "../../styles.scss";
+
+.title {
+  padding: 6.25rem 0 6.25rem 1.5rem;
+}
+
+.card-section {
+  padding: 0 1.5rem 4.375rem 1.5rem;
+}
+
+.row {
+  gap: 5.125rem;
+}
+
+.col {
+  width: 38.75rem;
+}
+
+.card-body-description {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.card-craftsman,
+.card-contact {
+  border: rgba(0, 0, 0, 0.175) 0.0625rem solid;
+  height: 100%;
+}
+
+.card-link {
+  font-size: 1.5rem;
+  color: $otherColor;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-craftsman {
+  background-color: #fff;
+}
+
+.card-contact {
+  background-color: rgba(0, 73, 124, 0.1);
+}
+
+.card-description-name {
+  padding-bottom: 3.875rem;
+  padding-top: 1.875rem;
+  color: $titleColor;
+}
+
+.card-description-location {
+  padding-bottom: 3.875rem;
+  color: $titleColor;
+}
+
+.card-description {
+  padding-bottom: 3.875rem;
+  font-size: 1.5rem;
+  color: $otherColor;
+}
+
+.about {
+  padding-bottom: 3.875rem;
+  color: $titleColor;
+}
+
+.learn-more {
+  margin-bottom: 1.875rem;
+  color: $titleColor;
+}
+
+.card-title {
+  padding-top: 1.875rem;
+  padding-bottom: 4.5625rem;
+  color: $titleColor;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  color: $otherColor;
+}
+
+.item {
+  padding-bottom: 2.625rem;
+}
+
+.item-message {
+  padding-bottom: 3.6rem;
+}
+
+.btn {
+  margin-bottom: 1.875rem;
+}
+
+.msg-envoi {
+  color: #82b864;
+}
