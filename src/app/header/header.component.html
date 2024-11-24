@@ -19,21 +19,28 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="d-flex" role="search">
+        <!-- Barre de recherche -->
+        <form class="d-flex" role="search" (submit)="searchArtisan()">
           <div class="input-group">
             <span class="input-group-text"><i class="bi bi-search"></i></span>
             <input
               id="search-input"
               class="form-control me-2"
-              type="search"
-              placeholder="Rechercher votre artisan"
+              type="text"
               aria-label="Search"
-              [value]="searchText"
-              (click)="changeText()"
+              [(ngModel)]="searchText"
+              (input)="filterArtisans()"
+              name="searchText"
+              (focus)="onSearchFocus()"
+              (click)="onSearchClick($event)"
+              (blur)="onSearchBlur()"
+              [placeholder]="isSearchFocused ? '' : 'Rechercher ...'"
             />
           </div>
           <button class="btn btn-outline" type="submit">Rechercher</button>
         </form>
+
+        <!-- Menu déroulant -->
         <div class="navbar-nav me-auto mb-2 mb-lg-0">
           <div class="nav-item dropdown">
             <a
@@ -46,19 +53,25 @@
               Spécialité
             </a>
             <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" routerLink="/building">Bâtiment</a>
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/services">Services</a>
-              </li>
-              <li>
-                <a class="dropdown-item" routerLink="/manufacturing"
-                  >Fabrication</a
+              <li class="list">
+                <a class="dropdown-item" routerLink="/building"
+                  ><i class="bi bi-arrow-right"></i>Bâtiment</a
                 >
               </li>
-              <li>
-                <a class="dropdown-item" routerLink="/food">Alimentation</a>
+              <li class="list">
+                <a class="dropdown-item" routerLink="/services"
+                  ><i class="bi bi-arrow-right"></i>Services</a
+                >
+              </li>
+              <li class="list">
+                <a class="dropdown-item" routerLink="/manufacturing"
+                  ><i class="bi bi-arrow-right"></i>Fabrication</a
+                >
+              </li>
+              <li class="list">
+                <a class="dropdown-item" routerLink="/food"
+                  ><i class="bi bi-arrow-right"></i>Alimentation</a
+                >
               </li>
             </ul>
           </div>
@@ -66,4 +79,20 @@
       </div>
     </div>
   </nav>
+
+  <!-- Liste des artisans filtrés -->
+  <ul
+    class="list-group mt-3"
+    *ngIf="isSearchFocused && searchText.trim() && filteredData.length > 0"
+  >
+    <li
+      *ngFor="let artisan of filteredData"
+      class="list-group-item"
+      (click)="selectArtisan(artisan)"
+    >
+      <strong>{{ artisan.name }}</strong> - {{ artisan.specialty }} ({{
+        artisan.location
+      }})
+    </li>
+  </ul>
 </header>

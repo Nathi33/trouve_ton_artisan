@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 form {
   padding-right: 5rem;
 }
@@ -11,6 +13,29 @@ form {
   background-color: #fff;
   margin: 0;
   padding: 0;
+}
+
+.list-group {
+  position: fixed;
+  z-index: 1000;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 300px; /* Limiter la hauteur de la liste */
+  overflow-y: auto; /* Défilement de la liste */
+  margin-top: 0.5rem;
+}
+
+.list-group-item {
+  color: $textColor;
+}
+
+.list-group:hover {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  color: $titleColor;
 }
 
 .form-control {
@@ -38,12 +63,16 @@ form {
   box-shadow: none;
 }
 
-li {
+.list {
   text-decoration: none;
 }
 
-a {
+.dropdown-item {
   color: #384050;
+}
+
+.bi {
+  padding-right: 0.5rem;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -71,11 +100,11 @@ a {
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .collapse {
-    padding-left: 30rem;
+    padding-left: 10rem;
   }
 
   .input-group {
-    width: 16rem;
+    width: 14rem;
   }
 }
 
