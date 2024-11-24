@@ -40,7 +40,9 @@
             <h3 class="card-title">Nous contacter</h3>
             <form [formGroup]="formulaire" (ngSubmit)="onSubmit()">
               <div class="mb-3 item">
-                <label for="name" class="form-label">Nom</label>
+                <label for="name" class="form-label"
+                  >Nom<span class="text-danger">*</span></label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -55,7 +57,9 @@
               </div>
 
               <div class="mb-3 item">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label"
+                  >Email<span class="text-danger">*</span></label
+                >
                 <input
                   type="email"
                   class="form-control"
@@ -71,7 +75,9 @@
                 </div>
               </div>
               <div class="mb-3 item-message">
-                <label for="message" class="form-label">Message</label>
+                <label for="message" class="form-label"
+                  >Message<span class="text-danger">*</span></label
+                >
                 <textarea
                   class="form-control"
                   id="message"
@@ -87,6 +93,7 @@
                 </div>
               </div>
               <button type="submit" class="btn">Envoyer</button>
+              <p class="text-danger mt-3">* Champ obligatoire</p>
             </form>
             <!-- Message de confirmation d'envoi -->
             <div class="msg-envoi" *ngIf="messageEnvoye">
