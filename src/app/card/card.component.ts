@@ -24,7 +24,7 @@ export class CardComponent implements OnInit {
     this.formulaire = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
+      message: ['', [Validators.required, Validators.minLength(20)]],
     });
   }
 
